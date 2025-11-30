@@ -18,6 +18,48 @@ The main features include:
 
 ---
 
+## Usage
+Run the experiment with:
+```bash
+python comp6704_individualAssign.py
+```
+The script will:
+- Load the MNIST dataset and split it across 20 clients.
+- Perform Non-DP FedAvg as a baseline.
+- Run DP-FL experiments for multiple clipping bounds (C=1.0, 0.5) and noise scales (σ=1.0, 5.0, 7.0).
+- Compute ε (epsilon) for each round using RDP accounting.
+- Plot accuracy vs federated rounds and save the figure as accuracy_vs_rounds.png.
+
+---
+
+## Experiment Settings
+Number of clients: 20
+Federated rounds: 20
+Batch size: 64 for clients, 256 for testing
+Learning rate: 0.01
+Clipping bounds: C = 1.0, 0.5
+Noise scales: σ = 0.5, 1.0, 2.0
+RDP orders: 2 to 127
+Delta (δ): 1e-5
+
+---
+
+## Outputs
+Console prints:
+- Accuracy of Non-DP FedAvg per round.
+- Accuracy and ε of DP-FL per round for each (C, σ) combination.
+Plot:
+- accuracy_vs_rounds.png: Test accuracy curves comparing Non-DP and DP-FL.
+
+---
+
+## Notes
+- The DP-FL experiments demonstrate the trade-off between model accuracy and privacy.
+- Users can modify C_list and sigma_list to explore other DP settings.
+- Ensure a GPU is available for faster training, although the code can run on CPU.
+
+---
+
 ## Requirements
 - Python 3.8+
 - PyTorch 2.x
@@ -29,3 +71,4 @@ You can install the required packages via pip:
 
 ```bash
 pip install torch torchvision numpy matplotlib
+```
