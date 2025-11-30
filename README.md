@@ -33,14 +33,14 @@ The script will:
 ---
 
 ## Experiment Settings
-Number of clients: 20
-Federated rounds: 20
-Batch size: 64 for clients, 256 for testing
-Learning rate: 0.01
-Clipping bounds: C = 1.0, 0.5
-Noise scales: σ = 0.5, 1.0, 2.0
-RDP orders: 2 to 127
-Delta (δ): 1e-5
+- Number of clients: 20
+- Federated rounds: 20
+- Batch size: 64 for clients, 256 for testing
+- Learning rate: 0.01
+- Clipping bounds: C = 1.0, 0.5
+- Noise scales: σ = 0.5, 1.0, 2.0
+- RDP orders: 2 to 127
+- Delta (δ): 1e-5
 
 ---
 
