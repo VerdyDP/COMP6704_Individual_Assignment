@@ -48,6 +48,7 @@ The script will:
 Console prints:
 - Accuracy of Non-DP FedAvg per round.
 - Accuracy and ε of DP-FL per round for each (C, σ) combination.
+
 Plot:
 - accuracy_vs_rounds.png: Test accuracy curves comparing Non-DP and DP-FL.
 
